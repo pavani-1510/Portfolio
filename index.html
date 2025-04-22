@@ -4,97 +4,131 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pavani R | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f0f2f5;
-      color: #333;
-      line-height: 1.7;
+    :root {
+      --primary: #6e8efb;
+      --secondary: #a777e3;
+      --text-color: #333;
+      --bg-color: #f9f9fb;
+      --card-bg: #ffffff;
+      --accent: #5a67d8;
     }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
     header {
-      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: white;
       text-align: center;
       padding: 3rem 1rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
     }
+
     header h1 {
       font-size: 3rem;
       margin-bottom: 0.5rem;
     }
+
     header p {
       font-size: 1.2rem;
       opacity: 0.9;
     }
+
     .container {
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 0 1rem;
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
     }
+
     section {
-      background: white;
+      background: var(--card-bg);
       padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
       margin-bottom: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     section:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     }
+
     h2 {
-      color: #6e4acf;
+      color: var(--accent);
       margin-bottom: 1rem;
       font-size: 1.8rem;
-      border-left: 5px solid #a777e3;
+      border-left: 5px solid var(--secondary);
       padding-left: 10px;
     }
-    ul { list-style-type: disc; padding-left: 1.5rem; }
-    a {
-      color: #6e4acf;
-      text-decoration: none;
+
+    ul {
+      list-style: disc;
+      padding-left: 1.5rem;
     }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
     a:hover {
       text-decoration: underline;
     }
-    .contact, .skills, .certifications {
+
+    .info-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 1.2rem;
     }
-    .contact div, .skills div, .certifications div {
-      flex: 1;
-      min-width: 220px;
+
+    .info-grid div {
+      flex: 1 1 250px;
     }
+
     .resume a {
       display: inline-block;
-      background: #6e8efb;
+      background: var(--primary);
       color: white;
-      font-weight: 600;
-      text-decoration: none;
-      padding: 0.7rem 1.5rem;
+      font-weight: bold;
+      padding: 0.8rem 1.5rem;
       border-radius: 30px;
+      margin-top: 1rem;
       transition: background 0.3s ease;
-      margin-top: 0.8rem;
     }
+
     .resume a:hover {
-      background: #5b7ce5;
+      background: var(--accent);
     }
+
     footer {
       text-align: center;
-      padding: 1rem;
-      background: #6e8efb;
+      padding: 2rem 1rem;
+      background: var(--primary);
       color: white;
+      font-size: 0.95rem;
       margin-top: 3rem;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
     }
 
     @media (max-width: 768px) {
       header h1 { font-size: 2.2rem; }
       h2 { font-size: 1.5rem; }
-      .contact, .skills, .certifications {
+      .info-grid {
         flex-direction: column;
       }
     }
@@ -108,14 +142,15 @@
   </header>
 
   <div class="container">
+
     <section>
       <h2>Contact</h2>
-      <div class="contact">
-        <div>Email: <a href="mailto:pavanikangundi@gmail.com">pavanikangundi@gmail.com</a></div>
-        <div>Phone: +91 7075921367</div>
-        <div>Location: Vijayawada</div>
-        <div>LinkedIn: <a href="https://linkedin.com/in/r-pavani" target="_blank">r-pavani</a></div>
-        <div>GitHub: <a href="https://github.com/pavani-1510" target="_blank">pavani-1510</a></div>
+      <div class="info-grid">
+        <div><strong>Email:</strong><br><a href="mailto:pavanikangundi@gmail.com">pavanikangundi@gmail.com</a></div>
+        <div><strong>Phone:</strong><br>+91 7075921367</div>
+        <div><strong>Location:</strong><br>Vijayawada</div>
+        <div><strong>LinkedIn:</strong><br><a href="https://linkedin.com/in/r-pavani" target="_blank">linkedin.com/in/r-pavani</a></div>
+        <div><strong>GitHub:</strong><br><a href="https://github.com/pavani-1510" target="_blank">github.com/pavani-1510</a></div>
       </div>
     </section>
 
@@ -132,7 +167,7 @@
 
     <section>
       <h2>Technical Skills</h2>
-      <div class="skills">
+      <div class="info-grid">
         <div><strong>Languages:</strong><br>Python, Java, SQL, HTML</div>
         <div><strong>Frameworks:</strong><br>Pandas, NumPy, Scikit-Learn, Matplotlib, Django</div>
         <div><strong>Tools:</strong><br>AWS, MySQL, Automation Anywhere, Excel, PowerPoint</div>
@@ -172,16 +207,16 @@
     <section>
       <h2>Projects</h2>
       <ul>
-        <li><strong>Placement Management System</strong>: Spring Boot app that cut placement cycle time by 35%.</li>
-        <li><strong>Face Mask Detection</strong>: Real-time VGG16-based detection with 92% accuracy.</li>
-        <li><strong>Online Book Store</strong>: Django app, improved search speed by 30%.</li>
-        <li><strong>Student Admission System</strong>: Java app processed 200+ applications, reduced effort by 60%.</li>
+        <li><strong>Placement Management System:</strong> Spring Boot app that cut placement cycle time by 35%.</li>
+        <li><strong>Face Mask Detection:</strong> Real-time VGG16-based detection with 92% accuracy.</li>
+        <li><strong>Online Book Store:</strong> Django app, improved search speed by 30%.</li>
+        <li><strong>Student Admission System:</strong> Java app processed 200+ applications, reduced effort by 60%.</li>
       </ul>
     </section>
 
     <section>
       <h2>Certifications</h2>
-      <div class="certifications">
+      <div class="info-grid">
         <div>Unity Certified User: Programmer (Apr 2025)</div>
         <div>AWS Cloud Practitioner (Feb 2025)</div>
         <div>Multicloud Network Associate - Aviatrix (Jan 2025)</div>
@@ -200,7 +235,7 @@
   </div>
 
   <footer>
-    &copy; 2025 Pavani R. Made with 💜 and AI.
+    &copy; 2025 Pavani R • Made with 💙 using AI
   </footer>
 
 </body>
