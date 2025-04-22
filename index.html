@@ -18,6 +18,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
@@ -25,6 +26,28 @@
       background: var(--bg-color);
       color: var(--text-color);
       line-height: 1.6;
+    }
+
+    nav {
+      background: var(--card-bg);
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
     }
 
     header {
@@ -131,10 +154,26 @@
       .info-grid {
         flex-direction: column;
       }
+
+      nav a {
+        display: inline-block;
+        margin: 0.5rem;
+      }
     }
   </style>
 </head>
 <body>
+
+  <nav>
+    <a href="#contact">Contact</a>
+    <a href="#objective">Objective</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#resume">Resume</a>
+  </nav>
 
   <header>
     <h1>Pavani R</h1>
@@ -143,7 +182,7 @@
 
   <div class="container">
 
-    <section>
+    <section id="contact">
       <h2>Contact</h2>
       <div class="info-grid">
         <div><strong>Email:</strong><br><a href="mailto:pavanikangundi@gmail.com">pavanikangundi@gmail.com</a></div>
@@ -154,18 +193,18 @@
       </div>
     </section>
 
-    <section>
+    <section id="objective">
       <h2>Objective</h2>
       <p>Aspiring AI and Machine Learning Engineer with expertise in fraud detection, healthcare AI, and sales forecasting. Passionate about AI-driven solutions and researching Personalized Healthcare and Generative AI.</p>
     </section>
 
-    <section>
+    <section id="education">
       <h2>Education</h2>
       <p><strong>B.Tech in Computer Science Engineering</strong>, KL University<br>July 2022 - May 2026 | CGPA: 8.96</p>
       <p><strong>Key Courses:</strong> AI, ML, Neural Networks, Web Development</p>
     </section>
 
-    <section>
+    <section id="skills">
       <h2>Technical Skills</h2>
       <div class="info-grid">
         <div><strong>Languages:</strong><br>Python, Java, SQL, HTML</div>
@@ -176,7 +215,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="experience">
       <h2>Experience</h2>
       <ul>
         <li><strong>AI Intern</strong>, Infosys Springboard (Nov 2024 - Dec 2024)
@@ -204,39 +243,37 @@
       </ul>
     </section>
 
-    
-<section>
-  <h2>Projects</h2>
-  <div class="info-grid">
-    <div>
-      🔹 <strong><a href="https://github.com/pavani-1510/Brain_Tumor_Classification" target="_blank">Brain Tumor Classification</a></strong><br>
-      Deep learning model for accurate brain tumor classification using CNNs.
-    </div>
-    <div>
-      🔹 <strong><a href="https://github.com/pavani-1510/OnlineFraudDetectionAWS" target="_blank">Online Fraud Detection</a></strong><br>
-      Machine learning model to detect fraudulent online transactions using AWS.
-    </div>
-    <div>
-      🔹 <strong><a href="https://github.com/pavani-1510/StudentAdmissionManagementSystem" target="_blank">Student Admission Management System</a></strong><br>
-      Java-based web app for handling student admissions with automated form processing.
-    </div>
-    <div>
-      🔹 <strong><a href="https://github.com/pavani-1510/OnlineBookStore" target="_blank">Online Book Store</a></strong><br>
-      Django-powered online bookstore with admin controls and payment flow.
-    </div>
-    <div>
-      🔹 <strong><a href="https://github.com/pavani-1510/Real-Time-Face-Mask-Detection" target="_blank">Real-Time Face Mask Detection</a></strong><br>
-      AI solution using OpenCV & VGG16 to detect face masks in real-time.
-    </div>
-    <div>
-      🔹 <strong><a href="https://rpavani.pythonanywhere.com/" target="_blank">Personal Portfolio Website</a></strong><br>
-      Fully responsive HTML portfolio hosted on PythonAnywhere.
-    </div>
-  </div>
-</section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="info-grid">
+        <div>
+          🔹 <strong><a href="https://github.com/pavani-1510/Brain_Tumor_Classification" target="_blank">Brain Tumor Classification</a></strong><br>
+          Deep learning model for accurate brain tumor classification using CNNs.
+        </div>
+        <div>
+          🔹 <strong><a href="https://github.com/pavani-1510/OnlineFraudDetectionAWS" target="_blank">Online Fraud Detection</a></strong><br>
+          Machine learning model to detect fraudulent online transactions using AWS.
+        </div>
+        <div>
+          🔹 <strong><a href="https://github.com/pavani-1510/StudentAdmissionManagementSystem" target="_blank">Student Admission Management System</a></strong><br>
+          Java-based web app for handling student admissions with automated form processing.
+        </div>
+        <div>
+          🔹 <strong><a href="https://github.com/pavani-1510/OnlineBookStore" target="_blank">Online Book Store</a></strong><br>
+          Django-powered online bookstore with admin controls and payment flow.
+        </div>
+        <div>
+          🔹 <strong><a href="https://github.com/pavani-1510/Real-Time-Face-Mask-Detection" target="_blank">Real-Time Face Mask Detection</a></strong><br>
+          AI solution using OpenCV & VGG16 to detect face masks in real-time.
+        </div>
+        <div>
+          🔹 <strong><a href="https://rpavani.pythonanywhere.com/" target="_blank">Personal Portfolio Website</a></strong><br>
+          Fully responsive HTML portfolio hosted on PythonAnywhere.
+        </div>
+      </div>
+    </section>
 
-
-    <section>
+    <section id="certifications">
       <h2>Certifications</h2>
       <div class="info-grid">
         <div>Unity Certified User: Programmer (Apr 2025)</div>
@@ -250,7 +287,7 @@
       </div>
     </section>
 
-    <section class="resume">
+    <section id="resume" class="resume">
       <h2>Resume</h2>
       <a href="Resume.pdf" target="_blank">📄 Download My Resume</a>
     </section>
