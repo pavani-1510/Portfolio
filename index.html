@@ -2,189 +2,175 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pavani R | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pavani R | AI/ML Engineer & Developer</title>
   <style>
-    :root {
-      --primary: #7f8c8d;
-      --secondary: #e74c3c;
-      --text-color: #ecf0f1;
-      --bg-color: #2c3e50;
-      --card-bg: #34495e;
-      --accent: #16a085;
-      --highlight: #f39c12;
-      --hover-effect: #2980b9;
-    }
-
+    /* Global Styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
+      font-family: 'Arial', sans-serif;
+      background: #f3f3f3;
+      color: #333;
       line-height: 1.6;
-    }
-
-    nav {
-      background: var(--card-bg);
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      transition: all 0.3s ease;
-    }
-
-    nav a {
-      margin: 0 1.5rem;
-      color: var(--text-color);
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-      letter-spacing: 1px;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: var(--hover-effect);
-      transform: scale(1.1);
-    }
-
-    header {
-      background: linear-gradient(135deg, var(--primary), var(--highlight));
-      color: var(--text-color);
-      text-align: center;
-      padding: 4rem 1rem;
-      border-bottom-left-radius: 50px;
-      border-bottom-right-radius: 50px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    header h1 {
-      font-size: 4rem;
-      margin-bottom: 0.5rem;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    header p {
-      font-size: 1.5rem;
-      opacity: 0.8;
-      margin-bottom: 2rem;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-    }
-
-    section {
-      background: var(--card-bg);
-      padding: 2.5rem;
-      margin-bottom: 2.5rem;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-
-    section:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-    }
-
-    h2 {
-      color: var(--accent);
-      margin-bottom: 1.5rem;
-      font-size: 2rem;
-      border-left: 6px solid var(--secondary);
-      padding-left: 15px;
-      transition: color 0.3s ease;
-    }
-
-    h2:hover {
-      color: var(--highlight);
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 1.5rem;
-      font-size: 1.1rem;
-    }
-
-    li {
-      margin-bottom: 0.8rem;
+      overflow-x: hidden;
     }
 
     a {
-      color: var(--accent);
       text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
+      color: inherit;
     }
 
-    a:hover {
-      text-decoration: underline;
-      color: var(--highlight);
-    }
-
-    .info-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-
-    .info-grid div {
-      flex: 1 1 250px;
-    }
-
-    .resume a {
-      display: inline-block;
-      background: var(--primary);
+    /* Header Section */
+    header {
+      background: #FF6F61;
       color: white;
+      text-align: center;
+      padding: 120px 20px;
+      border-bottom: 5px solid #d83b3b;
+      box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
       font-weight: bold;
-      padding: 1rem 2rem;
-      border-radius: 30px;
-      margin-top: 2rem;
-      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      animation: slideIn 2s ease-out;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #fffbf7;
+      animation: fadeIn 2s ease-out;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 50px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 180px;
+    }
+
+    nav a {
+      margin: 0 20px;
+      font-size: 1.1rem;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s ease;
       letter-spacing: 1px;
-      transition: background 0.3s ease, transform 0.3s ease;
     }
 
-    .resume a:hover {
-      background: var(--highlight);
-      transform: scale(1.1);
+    nav a:hover {
+      color: #FF6F61;
     }
 
+    /* Section Styles */
+    section {
+      padding: 80px 20px;
+      margin: 50px 0;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      color: #666;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .info-box {
+      background: #FFFAF0;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .info-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .info-box h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #FF6F61;
+    }
+
+    .info-box p {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
-      padding: 2rem 1rem;
-      background: var(--primary);
+      background: #333;
       color: white;
+      padding: 40px;
       font-size: 1rem;
-      margin-top: 3rem;
-      border-top-left-radius: 50px;
-      border-top-right-radius: 50px;
     }
 
-    @media (max-width: 768px) {
-      header h1 { font-size: 3rem; }
-      h2 { font-size: 1.6rem; }
-      .info-grid {
-        flex-direction: column;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 0.5rem;
-      }
+    footer a {
+      color: #FF6F61;
+      font-weight: bold;
     }
 
+    footer a:hover {
+      color: #fffbf7;
+    }
+
+    /* Button */
+    .cta-btn {
+      display: inline-block;
+      padding: 15px 35px;
+      background: #FF6F61;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 50px;
+      margin-top: 20px;
+      letter-spacing: 1px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background: #d83b3b;
+    }
+
+    /* Animations */
     @keyframes fadeIn {
       0% {
         opacity: 0;
@@ -194,144 +180,142 @@
       }
     }
 
-    section, nav, footer {
-      animation: fadeIn 1s ease-out;
+    @keyframes slideIn {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      nav {
+        flex-direction: column;
+        top: 230px;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Header Section -->
+  <header>
+    <h1>Pavani R</h1>
+    <p>AI/ML Enthusiast | Full Stack Developer | Data Scientist</p>
+  </header>
+
+  <!-- Navigation -->
   <nav>
-    <a href="#contact">Contact</a>
-    <a href="#objective">Objective</a>
+    <a href="#about">About</a>
     <a href="#education">Education</a>
     <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
     <a href="#certifications">Certifications</a>
-    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <header>
-    <h1>Pavani R</h1>
-    <p>AI/ML Enthusiast • Fraud Detection • Generative AI • Full-Stack Dev</p>
-  </header>
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m passionate about leveraging AI and ML to solve complex problems and innovate solutions that have a meaningful impact. From personalized healthcare to fraud detection, I am committed to exploring the intersection of technology and real-world applications.</p>
+  </section>
 
-  <div class="container">
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="info-grid">
-        <div><strong>Email:</strong><br><a href="mailto:pavanikangundi@gmail.com">pavanikangundi@gmail.com</a></div>
-        <div><strong>Phone:</strong><br>+91 7075921367</div>
-        <div><strong>Location:</strong><br>Vijayawada</div>
-        <div><strong>LinkedIn:</strong><br><a href="https://linkedin.com/in/r-pavani" target="_blank">linkedin.com/in/r-pavani</a></div>
-        <div><strong>GitHub:</strong><br><a href="https://github.com/pavani-1510" target="_blank">github.com/pavani-1510</a></div>
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="content-grid">
+      <div class="info-box">
+        <h3>B.Tech in Computer Science Engineering</h3>
+        <p>KL University | 2022-2026</p>
+        <p>CGPA: 8.96</p>
       </div>
-    </section>
-
-    <section id="objective">
-      <h2>Objective</h2>
-      <p>Aspiring AI and Machine Learning Engineer with expertise in fraud detection, healthcare AI, and sales forecasting. Passionate about AI-driven solutions and researching Personalized Healthcare and Generative AI.</p>
-    </section>
-
-    <section id="education">
-      <h2>Education</h2>
-      <p><strong>B.Tech in Computer Science Engineering</strong>, KL University<br>July 2022 - May 2026 | CGPA: 8.96</p>
-      <p><strong>Key Courses:</strong> AI, ML, Neural Networks, Web Development</p>
-    </section>
-
-    <section id="skills">
-      <h2>Technical Skills</h2>
-      <div class="info-grid">
-        <div><strong>Languages:</strong><br>Python, Java, SQL, HTML</div>
-        <div><strong>Frameworks:</strong><br>Pandas, NumPy, Scikit-Learn, Matplotlib, Django</div>
-        <div><strong>Tools:</strong><br>AWS, MySQL, Automation Anywhere, Excel, PowerPoint</div>
-        <div><strong>Core Areas:</strong><br>AI, ML, Neural Networks, Full-Stack Development</div>
-        <div><strong>Soft Skills:</strong><br>Emotional Intelligence, Analytical Thinking, Teamwork, Decision-Making</div>
+      <div class="info-box">
+        <h3>Key Coursework</h3>
+        <p>Artificial Intelligence, Machine Learning, Data Structures, Neural Networks</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="experience">
-      <h2>Experience</h2>
-      <ul>
-        <li><strong>AI Intern</strong>, Infosys Springboard (Nov 2024 - Dec 2024)
-          <ul>
-            <li>Improved demand prediction by 25% for Market Maven.</li>
-            <li>Integrated predictive analytics for inventory.</li>
-          </ul>
-        </li>
-        <li><strong>ML Intern</strong>, SkillCraft Technology (Sep 2024 - Oct 2024)
-          <ul>
-            <li>Boosted accuracy of house price prediction by 15%.</li>
-            <li>Reduced errors in hand gesture recognition by 20%.</li>
-          </ul>
-        </li>
-        <li><strong>Web Developer Intern</strong>, Prodigy Infotech (June 2024 - July 2024)
-          <ul>
-            <li>Developed 5+ web apps, enhanced UI responsiveness by 40%.</li>
-          </ul>
-        </li>
-        <li><strong>Salesforce CRM Developer</strong>, Gerent (May 2024 - June 2024)
-          <ul>
-            <li>Automated 80% of loan processing system, cut approval time by 30%.</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="info-grid">
-        <div>
-          🔹 <strong><a href="https://github.com/pavani-1510/Brain_Tumor_Classification" target="_blank">Brain Tumor Classification</a></strong><br>
-          Deep learning model for accurate brain tumor classification using CNNs.
-        </div>
-        <div>
-          🔹 <strong><a href="https://github.com/pavani-1510/OnlineFraudDetectionAWS" target="_blank">Online Fraud Detection</a></strong><br>
-          Machine learning model to detect fraudulent online transactions using AWS.
-        </div>
-        <div>
-          🔹 <strong><a href="https://github.com/pavani-1510/StudentAdmissionManagementSystem" target="_blank">Student Admission Management System</a></strong><br>
-          Java-based web app for handling student admissions with automated form processing.
-        </div>
-        <div>
-          🔹 <strong><a href="https://github.com/pavani-1510/OnlineBookStore" target="_blank">Online Book Store</a></strong><br>
-          Django-powered online bookstore with admin controls and payment flow.
-        </div>
-        <div>
-          🔹 <strong><a href="https://github.com/pavani-1510/Real-Time-Face-Mask-Detection" target="_blank">Real-Time Face Mask Detection</a></strong><br>
-          AI solution using OpenCV & VGG16 to detect face masks in real-time.
-        </div>
-        <div>
-          🔹 <strong><a href="https://rpavani.pythonanywhere.com/" target="_blank">Personal Portfolio Website</a></strong><br>
-          Fully responsive HTML portfolio hosted on PythonAnywhere.
-        </div>
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="content-grid">
+      <div class="info-box">
+        <h3>Languages</h3>
+        <p>Python, Java, SQL, HTML</p>
       </div>
-    </section>
-
-    <section id="certifications">
-      <h2>Certifications</h2>
-      <div class="info-grid">
-        <div>Unity Certified User: Programmer (Apr 2025)</div>
-        <div>AWS Cloud Practitioner (Feb 2025)</div>
-        <div>Multicloud Network Associate - Aviatrix (Jan 2025)</div>
-        <div>AI Associate - Salesforce (Oct 2024)</div>
-        <div>Red Hat App Developer (Sep 2024)</div>
-        <div>Oracle Cloud Generative AI (Jul 2024)</div>
-        <div>Intro to ML - NPTEL (Sep 2024)</div>
-        <div>Intro to Algorithms - NPTEL (Nov 2023)</div>
+      <div class="info-box">
+        <h3>Tools & Frameworks</h3>
+        <p>TensorFlow, Scikit-Learn, Pandas, NumPy, Django</p>
       </div>
-    </section>
+      <div class="info-box">
+        <h3>Cloud Platforms</h3>
+        <p>AWS, Google Cloud, Azure</p>
+      </div>
+      <div class="info-box">
+        <h3>Databases</h3>
+        <p>MySQL, MongoDB</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="resume" class="resume">
-      <h2>Resume</h2>
-      <a href="Resume.pdf" target="_blank">📄 Download My Resume</a>
-    </section>
-  </div>
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="content-grid">
+      <div class="info-box">
+        <h3>AI Intern</h3>
+        <p>Infosys | Nov 2024 - Dec 2024</p>
+        <p>Improved market demand prediction by 25% using machine learning models and cloud services.</p>
+      </div>
+      <div class="info-box">
+        <h3>ML Intern</h3>
+        <p>SkillCraft Technologies | Sep 2024 - Oct 2024</p>
+        <p>Enhanced house price prediction accuracy by 15% through model optimization and feature engineering.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="content-grid">
+      <div class="info-box">
+        <h3><a href="https://github.com/pavani-1510/Brain_Tumor_Classification" target="_blank">Brain Tumor Classification</a></h3>
+        <p>Deep learning model using CNNs for tumor detection in MRI scans.</p>
+      </div>
+      <div class="info-box">
+        <h3><a href="https://github.com/pavani-1510/OnlineFraudDetectionAWS" target="_blank">Online Fraud Detection</a></h3>
+        <p>Fraudulent transaction detection system utilizing AWS services and machine learning models.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <p>Unity Certified User (Apr 2025), AWS Cloud Practitioner (Feb 2025), Salesforce AI (Oct 2024)</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><a href="mailto:pavanikangundi@gmail.com">pavanikangundi@gmail.com</a></p>
+    <p>Vijayawada, India</p>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    &copy; 2025 Pavani R • Copyrights Reserved.
+    <p>&copy; 2025 Pavani R. All rights reserved.</p>
+    <a href="#">Privacy Policy</a>
   </footer>
 
 </body>
